@@ -1,0 +1,302 @@
+/* xedit */
+.meditor{
+             	width: 100%;
+             	padding:10px 0 50px;
+             	background: #ddd;
+             	position: relative;
+             	}
+             	.meditor>div{
+             	width: 400px;
+             	height: 650px;
+             	border: 1px solid #eee;	
+             	margin:0 auto;
+             	background: #fff;
+             	overflow-y: auto;
+             	overflow-x: hidden;
+             	
+             	}
+             	.meditor .bottom{
+             		width: 400px;
+             		height: 50px;
+             		line-height: 50px;
+             		background:#F8F8F8;
+             		position: absolute;
+             		bottom: 0;
+             		left: 50%;
+             		margin-left: -200px;
+             	}
+             	
+             	
+             	.meditor .bottom>div{
+             		width: 50%;
+             		text-align: center;
+             		float: left;
+             		cursor: pointer;
+             	}
+             	.meditor .bottom>div:hover{
+             		opacity: .75;
+             	}
+             	.meditor .bottom>div img{
+             		width: 20px;
+             	}
+             	.meditor>div .p{
+             		padding: 10px;
+             		color: #333;
+             		
+             	}
+             	.meditor section .btn{
+             	position: absolute;
+             	right: 0;
+             	top: 0;
+             	padding: 5px;
+             	color: #fff;
+             	background: #0084FF;
+             	cursor: pointer;
+             	display: none;
+             	}
+             	.meditor section .del{
+             	position: absolute;
+             	left: 0;
+             	top: 0;
+             	padding: 5px;
+             	color: #fff;
+             	background: #0084FF;
+             	cursor: pointer;
+             	display: none;
+             	}
+             	.meditor section{
+             		border: 1px solid #fff;
+             		position: relative;
+             	}
+             	.meditor section:hover{
+             		border: 1px dotted #0084FF;
+             	}
+             	.meditor section:hover a{
+             		display: block;
+             	}
+             	.meditor>div .img>img{
+             		max-width: 100%;
+             	}
+.meditor>div::-webkit-scrollbar {/*滚动条整体样式*/
+        width: 6px;     /*高宽分别对应横竖滚动条的尺寸*/
+        height: 1px;
+       
+    }
+.meditor>div::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+        border-radius: 6px;
+        background: #ccc;
+    }
+.meditor>div::-webkit-scrollbar-track {/*滚动条里面轨道*/
+        border-radius: 6px;
+    }
+	/* cascader */
+	.layui-rc-cascader {
+	  position: relative;
+	  font-size: 14px;
+	  line-height: 40px;
+	}
+	
+	.cascader-input {
+	  cursor: pointer;
+	  position: relative;
+	  width: 100%;
+	}
+	
+	.cascader-input > input {
+	  cursor: pointer;
+	  user-select:none;
+	}
+	
+	.cascader-input__inner {
+	  text-overflow: ellipsis;
+	}
+	
+	.cascader-input--suffix > .cascader-input__inner {
+	  padding-right: 32px;
+	}
+	
+	.cascader-input.focus .cascader-input__inner {
+	  border-color: #1890ff !important;
+	}
+	
+	.cascader-input__suffix {
+	  display: flex;
+	  position: absolute;
+	  width: 36px;
+	  height: 100%;
+	  right: 0;
+	  top: 0;
+	  align-items: center;
+	  justify-content: center;
+	  color: #c0c4cc;
+	  transition: all .3s;
+	  pointer-events: none;
+	  cursor: pointer;
+	}
+	
+	.cascader-input.focus .cascader-input__suffix {
+	  transform: rotate(180deg);
+	}
+	
+	.cascader-dropdown {
+	  display: none;
+	  position: absolute;
+	  left: 0;
+	  top: 32px;
+	  padding: 5px 0;
+	  z-index: 100002;
+	}
+	
+	.layui-selectup .cascader-dropdown {
+	   top: 32px;
+	  bottom: auto;
+	}
+	
+	.cascader-input.focus + .cascader-dropdown {
+	  display: block;
+	}
+	
+	.cascader-dropdown > .cascader-dropdown-panel {
+	  display: flex;
+	  flex-flow: row;
+	  border: 1px solid #d2d2d2;
+	  background-color: #fff;
+	  border-radius: 2px;
+	  box-shadow: 0 2px 4px rgba(0,0,0,.12);
+	  box-sizing: border-box;
+	}
+	
+	.cascader-dropdown-panel > .cascader-dropdown-dl {
+	  min-width: 180px;
+	  min-height: 180px;
+	  max-height: 300px;
+	  overflow-y: auto;
+	  box-sizing: border-box;
+	  color: #606266;
+	  border-right: 1px solid #d2d2d2;
+	}
+	
+	.cascader-dropdown-dl {
+	  -ms-overflow-style: none;
+	  overflow-x: hidden;
+	  overflow-y: auto;
+	}
+	
+	.cascader-dropdown-dl::-webkit-scrollbar {
+	  display: none;
+	}
+	
+	.cascader-dropdown-dl:last-child {
+	  border-right: none;
+	}
+	
+	.cascader-dropdown-dd {
+	  cursor: pointer;
+	  position: relative;
+	  display: flex;
+	  align-items: center;
+	  padding: 0 16px;
+	  height: 40px;
+	  line-height: 40px;
+	  outline: none;
+	  color: #606266;
+	  user-select: none;
+	}
+	
+	.cascader-dropdown-dd:hover {
+	  transition: .5s all;
+	  background-color: #f2f2f2;
+	}
+	
+	.cascader-dropdown-dd.active, .cascader-dropdown-dd.in-active{
+	  background-color: #1890ff;
+	  color: #fff;
+	}
+	
+	.cascader-dropdown-dd > span {
+	  flex: 1;
+	  padding-right: 16px;
+	  white-space: nowrap;
+	  overflow: hidden;
+	  text-overflow: ellipsis;
+	}
+	
+	.cascader-dropdown-dd.selected {
+	  color: #1890ff;
+	  font-weight: 600;
+	}
+	
+	.cascader-dropdown-dd .layui-icon-ok {
+	  display: none;
+	}
+	
+	.cascader-dropdown-dd.selected .layui-icon-ok {
+	  display: inline-block;
+	}
+	
+	.cascader-tags {
+	  display: none;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  right: 36px;
+	  cursor: pointer;
+	  margin: 2px 0 0 2px;
+	  background-color: #fff;
+	}
+	
+	.cascader-tags-body {
+	  display: flex;
+	  flex-wrap: wrap;
+	}
+	
+	.cascader-tags > .cascaer-tags-list {
+	  display: flex;
+	  flex-wrap: wrap;
+	}
+	
+	.cascader-tags-item {
+	  white-space: nowrap;
+	  display: inline-flex;
+	  align-items: center;
+	  max-width: 100%;
+	  margin: 4px 0 4px 6px !important;
+	  text-overflow: ellipsis;
+	  background-color: #f0f2f5;
+	  height: 30px;
+	  padding: 0 8px;
+	  line-height: 22px;
+	  box-sizing: border-box;
+	  font-size: 12px;
+	  color: #909399;
+	  user-select: none;
+	}
+	
+	.cascader-tags-item > i {
+	  margin-left: 4px;
+	  color: #c0c4cc;
+	}
+	
+	.cascader-tags-item > i:hover {
+	  color: #909399;
+	}
+	/* treeTable */
+	.treeTable-empty {
+	    width: 20px;
+	    display: inline-block;
+	}
+	
+	.treeTable-icon {
+	    cursor: pointer;
+	}
+	
+	.treeTable-icon .layui-icon-triangle-d:before {
+	    content: "\e623";
+	}
+	
+	.treeTable-icon.open .layui-icon-triangle-d:before {
+	    content: "\e625";
+	    background-color: transparent;
+	}
+	
+	
